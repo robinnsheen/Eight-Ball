@@ -35,7 +35,7 @@ const answersDefault = [
  *
  *  App -> EightBall
  */
-
+//TODO: keep 1 state since color and msg are coupled
 function EightBall({ answers = answersDefault }) {
   const [color, setColor] = useState("black");
   const [msg, setMsg] = useState("Think of a Question");
@@ -48,7 +48,7 @@ function EightBall({ answers = answersDefault }) {
     setMsg(answers[randNum].msg);
 
   }
-
+//TODO: move onclick to div
   return (
     <div className="EightBall" style={{ backgroundColor: color }}>
       <b onClick={shakeBall}> {msg} </b>
